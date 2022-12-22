@@ -1,0 +1,632 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    scroll-behavior: smooth;
+}
+
+
+@font-face {
+    font-family: 'BN';
+    src: url(BebasNeue-Bold.ttf);
+    
+}
+
+@font-face {
+    font-family: 'BNT';
+    src: url(BebasNeue-Thin.ttf)
+}
+
+@font-face {
+    font-family: 'BNR';
+    src: url(BebasNeue-Regular.ttf)
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align:start ;
+}
+
+.container{
+scroll-snap-type: y mandatory;
+overflow-y: scroll;
+height: 100vh;
+}
+
+
+.sky,.road{
+    position: relative;
+}
+
+.sky{
+    height: 70%;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    
+}
+
+.Pic{
+    height: 100%;
+    width: 50%;
+}
+
+.MainTitle{
+    color: black;
+    font-family: 'BN';
+    font-size: 8vh;
+}
+
+.intropara{
+    color: black;
+    font-family: 'BNT';
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+
+
+.icons{
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:3vh;
+    height: 18vh;
+    width: 18vh;
+}
+
+.road{
+    height: 30%;
+    background-color: dimgray;
+    box-sizing: border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    width: 100%;
+}
+
+.lines{
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+}
+
+.pythonlogo{
+    width: 15vh;
+    height: 15vh;
+    position:absolute;
+    animation-name: drive;
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.htmllogo{
+    width: 15vh;
+    height: 15vh;
+    position:absolute;
+    animation-name: drive2;
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.Rlogo{
+    width: 15vh;
+    height: 15vh;
+    top: 50%;
+    position:absolute;
+    animation-name: drive3;
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.Clogo{
+    width: 15vh;
+    height: 15vh;
+    top: 50%;
+    position:absolute;
+    animation-name: drive4;
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+
+@keyframes drive{
+    from{transform: translateX(-10vh)}
+    to{transform: translate(220vh)}
+
+}
+
+@keyframes drive2{
+    from{transform: translateX(-30vh)}
+    to{transform: translate(200vh)}
+
+}
+
+@keyframes drive3{
+    from{transform: translateX(-10vh)}
+    to{transform: translate(220vh)}
+
+}
+
+@keyframes drive4{
+    from{transform: translateX(-30vh)}
+    to{transform: translate(200vh)}
+
+}
+
+
+.header1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.box{
+    width: 45vh;
+    height: 45vh;
+    background-color: black;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.two{
+    background: skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    color: white;
+    font-family:'BN';
+    font-size: 5vh;
+}
+
+.card2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    color: white;
+    font-family:'BN';
+    font-size: 5vh;
+}
+
+.card3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    color: white;
+    font-family:'BN';
+    font-size: 5vh;
+}
+
+.maincontainer{
+    position: relative;
+    height:55vh;
+    width: 38vh;
+    background-color: skyblue;
+    border-radius: 25px;
+}
+
+.thecard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+
+}
+
+.thecard:hover{
+    transform:rotateY(180deg);
+}
+
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: skyblue;
+    color: black;
+    border: 1px black;
+
+}
+
+.theback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: black;
+    background-color:white;
+    transform:rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    font-family: BNR;
+    font-size: 3vh;
+    padding: 1vh;
+}
+
+.maincontainer2{
+    position: relative;
+    height:55vh;
+    width: 38vh;
+    background-color:skyblue;
+    border: 1px black;
+    border-radius: 25px;
+}
+
+.thecard2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+
+}
+
+.thecard2:hover{
+    transform:rotateY(180deg);
+}
+
+.thefront2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: skyblue;
+    color: black;
+    border: 1px black;
+
+}
+
+.theback2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: black;
+    background-color:white;
+    transform:rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 25px;
+    font-family: BNR;
+    font-size: 3vh;
+    padding: 1vh;
+}
+
+.maincontainer3{
+    position: relative;
+    height:55vh;
+    width: 38vh;
+    background-color:skyblue;
+    border: 1px black;
+    border-radius: 25px;
+}
+
+.thecard3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+
+}
+
+.thecard3:hover{
+    transform:rotateY(180deg);
+}
+
+.thefront3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background:skyblue;
+    color: black;
+    border: 1px black;
+
+}
+
+.theback3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: black;
+    background-color:white;
+    transform:rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    font-family: BNR;
+    font-size: 3vh;
+    padding: 1vh;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.button1{
+    width: 15vh;
+    height: 7.5vh;
+    border-radius: 25px;
+    color: black;
+    background-color: skyblue;
+    cursor: pointer;
+}
+
+.button2{
+    width: 15vh;
+    height: 7.5vh;
+    border-radius: 25px;
+    color: black;
+    background-color: skyblue;
+    cursor: pointer;
+}
+
+.button3{
+    width: 15vh;
+    height: 7.5vh;
+    border-radius: 25px;
+    color: black;
+    background-color: skyblue;
+    cursor: pointer;
+}
+
+.ABTME{
+    background: skyblue;
+    padding: 15vh;
+}
+
+
+.row1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10vh;
+}
+
+.headersabt{
+    font-size: 10vh;
+    color: white;
+    font-family:'BN';
+    gap:10vh;
+}
+
+.quote{
+    font-size: 4vh;
+    color: white;
+    font-family:'BN';
+}
+
+.paraabt{
+    font-size: 3vh;
+    color: white;
+    font-family:'BNR';
+    gap:10vh;
+  
+}
+
+.Experience{
+    background: skyblue;
+    font-family: BN;
+    padding: 15vh;
+}
+
+.exp{
+    font-size: 10vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top{
+    height: 50vh;
+    position:relative;
+    color: white;
+    background-image: url(IMG_4342.png);
+
+}
+
+.bottom{
+    height: 50vh;
+    position:relative;
+    color: white;
+}
+
+.PC{
+    font-size: 5vh;
+}
+
+.RI{
+    font-size: 5vh;
+}
+
+.date{
+    font-size: 3vh;
+}
+
+.contentexp{
+    font-size: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.SkillsM {
+    width: 100%;
+    background-color: skyblue;
+    display: relative;
+    font-family: BN;
+    font-size: 3vh;
+    padding: 1vh;
+
+  }
+
+.skilltitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size:10vh;
+}
+  
+  .skills {
+    text-align: left;
+    padding-right: 20px;
+    line-height: 5vh;
+    color: black;
+  }
+
+  .PS{
+    font-size: 5vh;
+    margin-top: 1vh;
+  }
+
+  .BS{
+    font-size: 5vh;
+    margin-top: 1vh;
+  }
+  
+  .html {
+    width: 90%; 
+    background-color:white; 
+    display: inline-block;
+    animation: html5 2s ease-out;
+  }
+  
+  .CSS {
+    width: 90%; 
+    background-color:white;
+    display: inline-block;
+    animation: css3 2s ease-out;
+  }
+  .Python {
+    width: 90%; 
+    background-color: white;
+    animation: js 2s ease-out;
+  }
+  .C {
+    width: 60%; 
+    background-color: white;
+    animation: php 2s ease-out;
+  }
+
+  .R{
+    width: 70%; 
+    background-color: white;
+    animation: php 2s ease-out;
+  }
+
+  .line2{
+    border-bottom: 0.5vh solid black;
+    display: block;
+    margin-top: 1vh;
+  }
+  .BS{
+    margin-top:1vh;
+  }
+
+  .Stats {
+    width: 90%; 
+    background-color:white; 
+    display: inline-block;
+    animation: html5 2s ease-out;
+  }
+  
+  .SQL {
+    width: 80%; 
+    background-color:white;
+    display: inline-block;
+    animation: css3 2s ease-out;
+  }
+
+  @keyframes html5 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 90%;
+    }
+  }
+  @keyframes css3 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+  @keyframes js {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 65%;
+    }
+  }
+  @keyframes php {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 60%;
+    }
+  }
+      
+
+
+
+
+
+    
+
+
+
